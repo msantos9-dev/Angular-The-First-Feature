@@ -1,0 +1,14 @@
+<h2>Available Books</h2>
+
+<button (click)="isShowing = !isShowing">
+    <ng-container *ngIf="isShowing" >Hide Books</ng-container> 
+    <ng-container *ngIf="!isShowing" >Show Books</ng-container>
+    
+</button>
+
+<ul *ngIf="isShowing">
+
+    <ng-container *ngFor ="let book of book; let i = index">
+       <app-book-item (bookEmitter)="addToReadingList($event)" [book] = "book"></app-book-item>
+    </ng-container>
+</ul>

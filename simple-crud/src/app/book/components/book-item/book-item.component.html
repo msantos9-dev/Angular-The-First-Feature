@@ -1,0 +1,6 @@
+<li class="bookList" > 
+    <img [src]="book.src" [alt]="book.name" width="200"/>
+    
+    <p class="bookDetails">{{ book.name }} by  {{ book.author }}</p> 
+    <button (click)="addToReadingList()">Add to Reading List</button>
+</li>
