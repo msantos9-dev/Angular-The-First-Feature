@@ -15,6 +15,14 @@ export class BookItemComponent implements OnInit {
   addToReadingList(){
     this.bookEmitter.emit(this.book);
   }
+
+  edit(){
+    this.bookEmitter.emit(this.book);
+  }
+
+  delete(){
+    this.bookEmitter.emit(this.book);
+  }
   constructor() { }
 
   ngOnInit(): void {
