@@ -1,8 +1,12 @@
 <li class="bookList" > 
-    <img [src]="book.src" [alt]="book.name" width="200"/>
+    <img [src]="book?.image" [alt]="book?.name" width="200"/>
     
-    <p class="bookDetails">{{ book.name }} by  {{ book.author }}</p> 
-    <button (click)="addToReadingList()">Add to Reading List</button>
-    <button (click)="edit()">Edit</button>
-    <button (click)="delete()">Delete</button>
+    <p class="bookDetails">{{ book?.name }} by  {{ book?.author }}</p> 
+    
+    <div class="bookButtonGroup">
+        <button mat-raised-button color="warn" (click)="edit()">Edit</button>
+        <button mat-raised-button color="warn" (click)="delete()">Delete</button>
+    </div>
+   
+
 </li>

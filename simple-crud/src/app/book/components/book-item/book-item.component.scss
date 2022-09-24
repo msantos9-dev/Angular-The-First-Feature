@@ -13,7 +13,15 @@ li {
 .bookList {
     list-style: none;
     text-overflow: ellipsis;
-    width: 200px;
-    text-align: center;
+    width: 225px;
     cursor: pointer;
 }
+
+.bookButtonGroup {
+    width: 200px;
+    margin: 10px auto 10px auto;
+  }
+  
+  .bookButtonGroup .mat-button-base {
+    margin: 0 8px 0 0;
+  }

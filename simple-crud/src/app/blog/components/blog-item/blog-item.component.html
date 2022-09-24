@@ -1,0 +1,16 @@
+<li class="blogList" > 
+    <div class="myBlogDetails">
+        <h1 class="myblogTitle">{{ blog?.title }}</h1>
+        <p class="blogDescription">{{ blog?.description }} </p> 
+        <p class="blogAuthor">by  {{ blog?.author }}</p> 
+
+        <div class="blogButtonGroup">
+            <button id="edit" mat-raised-button color="warn" (click)="edit()">Edit</button>
+            <button id="delete" mat-raised-button color="warn" (click)="delete()">Delete</button>
+        </div>
+        
+    </div>
+    
+    
+    
+</li>

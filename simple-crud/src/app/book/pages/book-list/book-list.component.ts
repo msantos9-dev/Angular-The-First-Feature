@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Book } from '../../models';
+import { Book } from '../../book.models';
 import { BookService } from './book.service';
 
 
@@ -21,14 +21,13 @@ export class BookListComponent implements OnInit {
     }
 
     edit(event:Book){
-      console.log(event.id);
+      console.log(event);
     }
 
     delete(event:Book){
       console.log(event.id);
     }
 
-  readingList: Book[] = [];
 
   ngOnInit(): void {
     this.book = this.bookService.getBookList();

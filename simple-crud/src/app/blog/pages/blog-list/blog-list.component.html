@@ -1,0 +1,15 @@
+<div class="myBlogHeader">
+    <h2>My Blogs</h2>
+
+    <button mat-raised-button color="warn" (click)="isShowing = !isShowing">
+        <ng-container *ngIf="isShowing" >Hide Blogs</ng-container> 
+        <ng-container *ngIf="!isShowing" >Show Blogs</ng-container>
+    </button>
+</div>
+
+
+<ul *ngIf="isShowing">
+    <ng-container *ngFor ="let blog of blogs; let i = index">
+       <app-blog-item (blogEmitter)="addMyBlogList($event)" [blog] = "blog"></app-blog-item>
+    </ng-container>
+</ul>
